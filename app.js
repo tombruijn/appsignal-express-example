@@ -1,8 +1,8 @@
+const { appsignal } = require("./appsignal");
 const { expressMiddleware, expressErrorHandler } = require("@appsignal/express");
 const express = require("express");
 const cors = require("cors")
 const bodyParser = require("body-parser")
-const { appsignal } = require("./appsignal");
 
 const app = express();
 app.use(expressMiddleware(appsignal));
