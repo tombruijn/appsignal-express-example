@@ -29,3 +29,6 @@ app.use(expressErrorHandler(appsignal))
 app.listen(8080, () => {
   console.log("Listening on port 8080");
 });
+
+console.log("started")
+appsignal.metrics().incrementCounter("test2", 1);
